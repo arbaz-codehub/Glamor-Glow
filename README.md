@@ -1,7 +1,7 @@
 # Glamor Glow
 
 ## Overview
-**Glamor Glow** is a stylish fashion blog website dedicated to beauty enthusiasts. The site features information about popular lipsticks, their formulas, and much more. With its unique UI and smooth scrolling animations, Glamor Glow provides an engaging experience for users looking for the latest trends in cosmetics.
+**Glamor Glow** is a stylish fashion blog website made with html, css and javascript dedicated to beauty enthusiasts. The site features information about popular lipsticks, their formulas, and much more. With its unique UI and smooth scrolling animations, Glamor Glow provides an engaging experience for users looking for the latest trends in cosmetics.
 
 ## Features
 - **Unique UI**: A visually appealing design that sets the tone for a trendy fashion blog.
