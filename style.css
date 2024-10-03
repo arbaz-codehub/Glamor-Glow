@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lemon&family=Poppins:wght@600&family=Quicksand:wght@400;500;700&family=Rubik+Doodle+Shadow&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    user-select: none;
+    color: black;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* -------------------------Global Variables------------------------- */
+
+:root {
+    --primary-text-color: #121212;
+    --secondary-text-color: #121212cc;
+}
+
+/* -------------------------Utility Classes------------------------- */
+.flex {
+    display: flex;
+}
+.center {
+    place-content: center;
+}
+.inline-block {
+    display: inline-block;
+}
+
+.grid {
+    display: grid;
+}
+
+/* -------------------------Header------------------------- */
+header {
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    justify-content: flex-end;
+}
+
+nav {
+    padding: 0 10px;
+    border-radius: 25px;
+    margin-right: 3%;
+    /* border: 2px solid black; */
+}
+
+header > nav > a {
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 10px 15px;
+    display: inline-block;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+header > nav > a:hover {
+    cursor: pointer;
+    color: rgb(221,124,132);
+}
+
+/* -------------------------Sections Side------------------------- */
+section {
+    min-height: 100vh;
+    
+}
+
+/* -------------------------Home Sections------------------------- */
+#home {
+  justify-content: space-between;
+    /* background-color: lightblue; */
+    position: relative;
+}
+.cat-img {
+  margin-left: 70px;
+  width: 50%;
+  height: 100vh;
+  /* border: 1px solid black; */
+}
+.mid-title {
+  align-self: center;
+  margin: 0 0 50px 0;
+  position: absolute;
+  right: 360px;
+}
+.title {
+  font-size: 3.5rem;
+  color: rgb(221,124,132);
+  font-style: italic;
+  font-family: "Dancing Script";
+}
+.subtitle {
+  font-size: 1.2rem;
+  font-family: "Quicksand", sans-serif;
+}
+.lip-img {
+  height: 70vh;
+  align-self: flex-end;
+  transform: translateX(-40px);
+}
+.lip-des {
+    position: absolute;
+    bottom: 50px;
+    right: 5px;
+    font-family: "Quicksand";
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: 600;
+    font-size: 1rem;
+    opacity: 0;
+    animation: myAnim 2s ease 2s 1 normal forwards;
+}
+
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/* -------------------------Exclusive Sections------------------------- */
+#exclusive {
+    /* height: 300px; */
+    padding: 30px 40px 0 40px;
+}
+.ex-list {
+    width: 100%;
+    height: 540px;
+    padding: 0px 15px;
+    margin-bottom: 10px;
+    /* border: 1px solid black; */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 10px 70px;
+    
+}
+.item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    /* border: 1px solid green; */
+    border-radius: 25px;
+    font-family: "Quicksand";
+}
+.item:hover {
+    cursor: pointer;
+}
+.item > img {
+    width: 90%;
+    height: 250px;
+}
+.item > p {
+    font-size: 1.1rem;
+}
+
+/* -------------------------Quality Sections------------------------- */
+#quality {
+    padding: 40px;
+}
+
+.quality-main {
+    width: 100%;
+    height: 540px;
+    /* border: 1px solid black; */
+    transform: translateY(35px);
+}
+.q1, .q2 {
+    width: 100%;
+    height: 50%;
+    /* border: 1px solid black; */
+    justify-content: space-between;
+}
+
+.quality-text {
+    width: 80%;
+    padding: 20px;
+    text-align: justify;
+    line-height: 40px;
+    flex-direction: column;
+    place-content: center;
+    gap: 10px;
+}
+.quality-text > h1 {
+    color: rgb(221,124,132);
+    font-size: 2.8rem;
+    font-family: "Dancing Script";
+}
+.quality-text > p  {
+    font-size: 1.5rem;
+    font-family: "Quicksand";
+}
+
+.outer {
+    width: 20%;
+    height: 90%;
+    padding: 10px;
+    border: 3px solid rgb(221,124,132);
+}
+.inner {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid rgb(221,124,132);
+}
+.outer, .inner {
+    border-radius: 50%;
+}
+.inner > img {
+    width: 100%;
+    height: 100%;
+}
+.br-lt {
+    border-left-color: transparent;
+}
+.br-rt {
+    border-right-color: transparent;
+}
+
+/* -------------------------FAQ Sections------------------------- */
+#faq {
+    padding: 40px;
+}
+#faq > h1 {
+    margin-bottom: 10px;
+}
+.faq-main {
+    width: 100%;
+    height: 540px;
+    /* border: 1px solid black; */
+}
+.faq {
+    width: 70%;
+    height: 100%;
+    padding: 5px 10px;
+    /* border: 1px solid black; */
+}
+
+/* Accordion Faq -------------------------------- */
+.acc-container {
+    width: 100%;
+    height: 100%;
+    padding: 10px 40px;
+    background-color: rgb(128, 128, 128,0.125);
+    place-content: space-around;
+    flex-direction: column;
+    gap: 20px;
+    font-family: "Quicksand";
+    font-weight: 500;
+    box-shadow: 0 0 5px black, 0 0 2px rgba(221,124,132);
+}
+
+.acc-container, .acc-items {
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.acc-title, .acc-content {
+    padding: 10px;
+}
+.acc-title {
+    font-size: 1.4rem;
+}
+.acc-content {
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+.acc-title {
+    background-color: rgba(221,124,132, 0.2);
+}
+.acc-title:hover {
+    cursor: pointer;
+}
+.acc-content {
+    display: none;
+    background-color: white;
+}
+.acc-items.active .acc-content {
+    display: block;
+    height: 100%;
+}
+
+/* Banner Side---------------------------- */
+.banner {
+    width: 30%;
+    height: 100%;
+    /* border: 1px solid black; */
+    padding: 5px 10px;
+}
+.banner > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 15px 0 0;
+}
+
+/* -------------------------Form Sections------------------------- */
+#form {
+    padding: 40px;
+}
+
+.form-main {
+    width: 100%;
+    height: 540px;
+    /* border: 1px solid black; */
+}
+.feedback {
+    width: 40%;
+}
+.form {
+    width: 60%;
+}
+.feedback, .form {
+    height: 100%;
+    /* border: 1px solid black; */
+}
+.feedback-container {
+    height: 50%;
+    padding: 20px;
+    /* border: 1px solid black; */
+}
+
+.feed-card {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.card-upper {
+    width: 100%;
+    height: 30%;
+    border: 1px solid black;
+    background-color: rgba(254,215,234, 0.5);
+    border-radius: 10px 10px 0 0;
+    align-items: center;
+    font-family: "Dancing Script";
+    font-size: 1.3rem;
+    padding: 5px;
+}
+.card-upper > img {
+    width: 20%;
+    height: 100%;
+    margin-right: 8px;
+}
+.card-lower {
+    width: 100%;
+    height: 70%;
+    padding: 15px;
+}
+.card-lower > p {
+    font-size: 1.5rem;
+    text-align: justify;
+    font-family: "Quicksand";
+}
+
+.thanks {
+    height: 50%;
+}
+.feedback-container, .thanks {
+    width: 100%;
+    /* border: 1px solid black; */
+}
+.thanks > img {
+    width: 100%;
+    height: 100%;
+}
+
+.form {
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 30px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+}
+.form-group {
+    margin-bottom: 40px;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.subscribe-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(217,96,153);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.subscribe-btn:hover {
+    background-color: rgba(217,96,153, 0.8);
+}
